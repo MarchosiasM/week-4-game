@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crystal Catch</title>
+
+    <!-- Bootstrap is used to make game look nicer -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <img class="images" src="assets/images/world-of-warcraft-banner1.jpg" alt="WoW Banner">
+                <h2 class="pretty">Click on a gem to begin</h2>
+            </div>
+        </div>
+
+        <!-- Below our header, start building our UI. I'd like it all to be one row, with the elements separated into 8 elements. 
+    The leftmost column with the goal, rightmost with the count. In the middle I want two columns of two rows of gems. 
+    When a player clicks on a gem, it will update the count -->
+        <!-- Before we begin, let's create a column to store our wins and losses -->
+        <div class="win-loss-container pretty">
+            <h1 id="win-panel">
+                Wins: 0
+            </h1>
+            <h1 class="pretty" id="loss-panel">
+                Losses: 0
+            </h1>
+        </div>
+        <!-- Here build the actual play site. I want to use a total of 8 columns so that leaves 2 on the left and right to be free. -->
+        <div class="row">
+            <div class="col-md-2">
+                <!-- Empty, sandwhich the content with these. Creates breathable space -->
+            </div>
+            <div class="col-md-2" id="goal-panel">
+
+            </div>
+            <div class="col-md-2 gem-col-1">
+                <!-- Store my gem elements in two stacked rows -->
+                <div class="row">
+                    <img src="assets/images/Ametrine%20Crystal01.png" id="gem1">
+                </div>
+                <!-- Also store these gem elements in two stacked rows -->
+                <div class="row">
+                    <img src="assets/images/Emerald%20Gem01.png" id="gem2">
+                </div>
+            </div>
+            <div class="col-md-2 gem-col-2">
+                <div class="row">
+                    <img src="assets/images/Morganite%20Crystal01.png" id="gem3">
+                </div>
+                <div class="row">
+                    <img src="assets/images/Sapphire%20Gem01.png" id="gem4">
+                </div>
+            </div>
+            <div class="col-md-2" id="count-panel">
+                Current count: 0
+            </div>
+            <div class="col-md-2">
+                <!-- Empty, sandwhich the content with these. -->
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+
+</html>
